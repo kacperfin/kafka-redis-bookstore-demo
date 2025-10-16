@@ -4,7 +4,6 @@ import pandas as pd
 
 import json
 from time import sleep
-import logging
 
 from config import REDIS_HOST, REDIS_PORT
 

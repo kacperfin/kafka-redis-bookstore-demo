@@ -10,7 +10,6 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('logs/consumer.log', mode='w'),
         logging.StreamHandler()
     ]
 )
@@ -26,12 +25,12 @@ consumer = KafkaConsumer('orders',
 r = redis.Redis(host=REDIS_HOST, port=REDIS_PORT, decode_responses=True)
 
 pipe = r.pipeline()
+
 try:
     for msg in consumer:
         pipe.lpush('orders', json.dumps(msg.value))
         pipe.execute()
 
         logger.info(f'Order: {msg.value} set in Redis.')
-        
 except KeyboardInterrupt:
     print('Consumer has been shut down.')

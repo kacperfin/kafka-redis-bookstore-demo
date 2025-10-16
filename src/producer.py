@@ -1,10 +1,9 @@
 from kafka import KafkaProducer
 
 import random
-from time import sleep
+from time import sleep, time
 import json
 import logging
-import datetime
 
 from config import KAFKA_BOOTSTRAP_SERVERS
 
@@ -12,7 +11,6 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('logs/producer.log', mode='w'),
         logging.StreamHandler()
     ]
 )
@@ -35,7 +33,7 @@ try:
         book = {
             'author': author,
             'price': price,
-            'timestamp': datetime.datetime.now(datetime.UTC)
+            'timestamp': int(time()*1_000_000)
         }
 
         producer.send('orders', book)
