@@ -31,6 +31,8 @@ try:
         pipe.lpush('orders', json.dumps(msg.value))
         pipe.execute()
 
-        logger.info(f'Order: {msg.value} set in Redis.')
+        logger.info(f'Order: {msg.value} set in Redis')
 except KeyboardInterrupt:
-    print('Consumer has been shut down.')
+    print('Consumer has been shut down')
+finally:
+    consumer.close()
