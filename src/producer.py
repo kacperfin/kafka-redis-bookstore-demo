@@ -6,6 +6,7 @@ import json
 import logging
 
 from config import KAFKA_BOOTSTRAP_SERVERS
+from consumer_utils.get_random_book import get_random_book
 
 logging.basicConfig(
     level=logging.INFO,
@@ -16,9 +17,6 @@ logging.basicConfig(
 )
 
 logger = logging.getLogger('producer')
-
-titles = ['Ready to Die, Ready to Kill', 'Harry Potter', 'Atomic Habits', 'The Art of War', 'Rich Dad Poor Dad', 'Think and Grow Rich',]
-authors = ['Amadeusz Burdziak', 'Kacper Aleksander', 'J.K. Rowling', 'Jan Kolwicz', 'Dan Pena', 'Rafał Mazur', 'James Clear', 'Robert Kiyosaki', 'Napoleon Hill']
 
 producer = KafkaProducer(bootstrap_servers=KAFKA_BOOTSTRAP_SERVERS,
                          value_serializer=lambda v: json.dumps(v, default=str).encode('utf-8'))
@@ -34,16 +32,8 @@ try:
         wait = random.randint(1, 5)
         sleep(wait)
 
-        title = random.choice(titles)
-        author = random.choice(authors)
-        price = random.randint(40, 110)
-
-        book = {
-            'title': title,
-            'author': author,
-            'price': price,
-            'timestamp': int(time()*1_000_000)
-        }
+        book = get_random_book()
+        book['timestamp'] = int(time()*1_000_000)
 
         future = producer.send('orders', book)
         logger.debug(f'Attempting to send order: {book}')

@@ -1,0 +1,122 @@
+[
+    {
+        "title": "Ready to Die, Ready to Kill",
+        "author": "Amadeusz Burdziak",
+        "price": 19.99,
+        "genre": "Self-Help"
+    },
+    {
+        "title": "Harry Potter",
+        "author": "J.K. Rowling",
+        "price": 12.99,
+        "genre": "Fantasy"
+    },
+    {
+        "title": "Atomic Habits",
+        "author": "James Clear",
+        "price": 16.99,
+        "genre": "Self-Help"
+    },
+    {
+        "title": "The Art of War",
+        "author": "Sun Tzu",
+        "price": 9.99,
+        "genre": "Philosophy"
+    },
+    {
+        "title": "Rich Dad Poor Dad",
+        "author": "Robert Kiyosaki",
+        "price": 15.99,
+        "genre": "Business"
+    },
+    {
+        "title": "Think and Grow Rich",
+        "author": "Napoleon Hill",
+        "price": 11.99,
+        "genre": "Self-Help"
+    },
+    {
+        "title": "Dune",
+        "author": "Frank Herbert",
+        "price": 18.99,
+        "genre": "Science Fiction"
+    },
+    {
+        "title": "How to Win Friends and Influence People",
+        "author": "Dale Carnegie",
+        "price": 14.99,
+        "genre": "Self-Help"
+    },
+    {
+        "title": "The Lean Startup",
+        "author": "Eric Ries",
+        "price": 17.99,
+        "genre": "Business"
+    },
+    {
+        "title": "1984",
+        "author": "George Orwell",
+        "price": 13.99,
+        "genre": "Dystopian"
+    },
+    {
+        "title": "Steve Jobs",
+        "author": "Walter Isaacson",
+        "price": 20.99,
+        "genre": "Biography"
+    },
+    {
+        "title": "Clean Code",
+        "author": "Robert C. Martin",
+        "price": 42.99,
+        "genre": "Technology"
+    },
+    {
+        "title": "The Millionaire Fastlane",
+        "author": "MJ DeMarco",
+        "price": 16.99,
+        "genre": "Business"
+    },
+    {
+        "title": "Solaris",
+        "author": "Stanisław Lem",
+        "price": 14.99,
+        "genre": "Science Fiction"
+    },
+    {
+        "title": "Crime and Punishment",
+        "author": "Fyodor Dostoevsky",
+        "price": 13.99,
+        "genre": "Classic Literature"
+    },
+    {
+        "title": "A Brief History of Time",
+        "author": "Stephen Hawking",
+        "price": 15.99,
+        "genre": "Science"
+    },
+    {
+        "title": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "price": 14.99,
+        "genre": "Fantasy"
+    },
+    {
+        "title": "The Lord of the Rings",
+        "author": "J.R.R. Tolkien",
+        "price": 22.99,
+        "genre": "Fantasy"
+    },
+    {
+        "title": "The Last Wish",
+        "author": "Andrzej Sapkowski",
+        "price": 16.99,
+        "genre": "Fantasy"
+    },
+    {
+        "title": "The Doll",
+        "author": "Bolesław Prus",
+        "price": 14.99,
+        "genre": "Classic Literature"
+    }
+]
